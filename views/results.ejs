@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Movie App</title>
+    <link rel="stylesheet" href="/styles/bootstrap.min.css" />
+    <link rel="stylesheet" href="/styles/design.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700&display=swap" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet" />
+    <link rel="shortcut icon" href="https://cdn.dribbble.com/users/492035/screenshots/8986102/media/7de7ac27629bc67982468b4bd277817e.png" type="image/x-icon" />
+  </head>
+
+  <body>
+    <div class="container">
+      <h2 class="text-center pt-5">
+        <a href="/" class="rounded-circle bg-dark p-1 text-white"> <i class="fa fa-home" aria-hidden="true"></i></a>
+      </h2>
+
+      <h1 id="searchHeading">Search Result <span style="color: grey">> </span><%= data["title"].toUpperCase() %></h1>
+
+      <div class="card mb-5 w-75">
+        <div class="row no-gutters">
+          <div class="col-md-4"><img src="<%= data["imgUrl"]%>" class="card-img img-fluid"></div>
+
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title"><b><%= data["title"]%></b> <%= data["releaseDate"]%></h2>
+              <hr />
+              <h4 class="mb-2">Overview:</h4>
+              <p class="card-text"><%= data["overview"]%></p>
+
+              <hr />
+              <p class="card-text"><b>User Score:</b> <%= data["userScore"]%>%</p>
+              <hr />
+              <h4 class="mb-3">Featured Crew:</h4>
+
+              <% data["crew"].forEach((crew)=> { %>
+              <p class="ml-2"><b><%= crew.name %></b> (<%= crew.role %>),</p>
+              <% }); %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

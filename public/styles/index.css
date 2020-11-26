@@ -1,0 +1,25 @@
+body {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(185deg, rgba(255, 255, 255, 1) 0%, rgba(208, 206, 206, 1) 0%);
+}
+
+#home h1 {
+  margin-top: 200px;
+}
+
+h1 {
+  font-weight: bolder;
+}
+.card-title {
+  font-family: Lato;
+}
+
+.card {
+  margin-left: 12.5%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(185deg, rgba(255, 255, 255, 1) 0%, rgba(250, 246, 246, 1) 100%);
+}
+
+.card-img {
+  height: 20rem;
+}
